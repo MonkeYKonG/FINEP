@@ -8,7 +8,7 @@ Rails.application.routes.draw do
   post 'users/signup' => 'users#sign_up'
   post 'users/signin' => 'users#sign_in'
   post 'users/forgot' => 'users#forgot_passwd'
-  update 'users/update' => 'users#update_profile'
+  patch 'users/update' => 'users#update_profile'
 
   # Contracts routes
   get 'contracts' => 'contracts#get_contracts'
