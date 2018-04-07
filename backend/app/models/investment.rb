@@ -1,3 +1,3 @@
-class investment < ActiveRecord::Base
+class Investment < ActiveRecord::Base
     
 end

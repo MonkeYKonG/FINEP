@@ -3,6 +3,8 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 
+import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 import { RouterModule } from '@angular/router';
 
 /* Other imports */
@@ -37,6 +39,8 @@ import { WhoWeAreComponent } from './pages/who-we-are/who-we-are.component';
   ],
   imports: [
     BrowserModule,
+    FormsModule,
+    HttpClientModule,
     RouterModule.forRoot([
       {
         path: '',

@@ -1,3 +1,17 @@
 <p>
   home works!
 </p>
+<form (ngSubmit)="submitSignIn()">
+  <input type="text" name="pseudo" placeholder="pseudo" [(ngModel)]="signin.pseudo" />
+  <input type="text" name="passwd" placeholder="password" [(ngModel)]="signin.passwd" />
+  <input type="submit" value="sign-in" />
+</form>
+<br />
+<form (ngSubmit)="submitSignUp()">
+  <input type="text" name="pseudo" placeholder="pseudo" [(ngModel)]="signup.pseudo" />
+  <input type="text" name="firstname" placeholder="firstname" [(ngModel)]="signup.firstname" />
+  <input type="text" name="name" placeholder="name" [(ngModel)]="signup.name" />
+  <input type="text" name="passwd" placeholder="password" [(ngModel)]="signup.passwd" />
+  <input type="submit" value="sign-up" />
+</form>
+

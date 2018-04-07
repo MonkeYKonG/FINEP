@@ -16,7 +16,7 @@ Rails.application.routes.draw do
   post 'contacts/sign' => 'contracts#sign_contract'
 
   # Investment routes
-  get 'investment' => 'investments#get_investments'
-  post 'investment' => 'investments#invest'
+  get 'investments' => 'investments#get_investments'
+  post 'investments' => 'investments#invest'
   
 end

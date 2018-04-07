@@ -1,3 +1,3 @@
-class contract < ActiveRecord::Base
+class Contract < ActiveRecord::Base
     
 end

@@ -1,3 +1,15 @@
 <p>
   my-profile works!
 </p>
+<form (ngSubmit)="submitNewContract()">
+  <input type="text" name="title" placeholder="title" [(ngModel)]="newContract.title" />
+  <input type="text" name="body" placeholder="body" [(ngModel)]="newContract.body" />
+  <input type="submit" value="New contract" />
+</form>
+<br/>
+<form (ngSubmit)="submitNewInvestment()">
+  <input type="number" name="authorid" placeholder="author id" [(ngModel)]="newInvestment.author_id" />
+  <input type="number" name="destid" placeholder="dest id" [(ngModel)]="newInvestment.dest_id" />
+  <input type="number" name="value" placeholder="value" [(ngModel)]="newInvestment.value" />
+  <input type=submit value="New investment" />
+</form>

@@ -5,3 +5,8 @@ export class User {
     public pseudo: string;
     public capital: number;
 }
+
+export class SignInUser {
+    public pseudo: string;
+    public passwd: string;
+}
