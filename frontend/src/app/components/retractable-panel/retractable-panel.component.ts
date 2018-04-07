@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-retractable-panel',
@@ -7,7 +7,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class RetractablePanelComponent implements OnInit {
 
-  constructor() { }
+  @Input('isOpen') isOpen;
+  @Input('title') title;
+  @Output() openClick = new EventEmitter<any>();
+
+  buttonClicked() {
+    this.openClick.emit();
+  }
+
+  constructor() {
+    this.isOpen = true;
+  }
 
   ngOnInit() {
   }

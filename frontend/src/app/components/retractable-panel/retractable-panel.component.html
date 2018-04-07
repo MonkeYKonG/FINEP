@@ -1,3 +1,8 @@
-<p>
-  retractable-panel works!
-</p>
+<div>
+  <p>
+    retractable-panel works!
+  </p>
+  <div *ngIf="isOpen">
+    <ng-content></ng-content>
+  </div>
+</div>
