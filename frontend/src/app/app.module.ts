@@ -3,11 +3,10 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 
-import { FormsModule } from '@angular/forms';
-import { HttpClientModule } from '@angular/common/http';
-import { RouterModule } from '@angular/router';
+import { MaterialModule } from './material/material.module';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { RoutesModule } from './routes/routes.module';
 
-/* Other imports */
 import { ApiService } from './services/api.service';
 import { HomeComponent } from './pages/home/home.component';
 import { ProfileComponent } from './pages/profile/profile.component';
@@ -20,7 +19,6 @@ import { InformationsComponent } from './pages/informations/informations.compone
 import { ContactComponent } from './pages/contact/contact.component';
 import { LegalsInformationsComponent } from './pages/legals-informations/legals-informations.component';
 import { WhoWeAreComponent } from './pages/who-we-are/who-we-are.component';
-
 
 @NgModule({
   declarations: [
@@ -39,22 +37,9 @@ import { WhoWeAreComponent } from './pages/who-we-are/who-we-are.component';
   ],
   imports: [
     BrowserModule,
-    FormsModule,
-    HttpClientModule,
-    RouterModule.forRoot([
-      {
-        path: '',
-        component: HomeComponent
-      },
-      {
-        path: 'profile/:id',
-        component: ProfileComponent
-      },
-      {
-        path: 'my-profile',
-        component: MyProfileComponent
-      }
-    ])
+    MaterialModule,
+    BrowserAnimationsModule,
+    RoutesModule
   ],
   providers: [ApiService],
   bootstrap: [AppComponent]

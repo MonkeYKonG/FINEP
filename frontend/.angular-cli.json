@@ -21,7 +21,8 @@
       "styles": [
         "styles.css",
         "../node_modules/bootstrap/dist/css/bootstrap.min.css",
-        "assets/sass/paper-kit.scss"
+        "assets/sass/paper-kit.scss",
+        "../node_modules/hammerjs/hammer.min.js"
       ],
       "scripts": [
         "../node_modules/jquery/dist/jquery.slim.min.js",
