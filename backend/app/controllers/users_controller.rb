@@ -24,8 +24,23 @@ class UsersController < ApplicationController
     end
 
     def sign_in
-        @user = User.where(pseudo: params[:pseudo], passwd: params[:passwd])
-        render json: @user
+        if params[:Action] && params[:Action] == "signin"
+            if params[:email] != "" && params[:passwd] != ""
+                @user = User.where(pseudo: params[:email], passwd: params[:passwd])
+                if @user && @user.size == 1
+                    render :status => 201 and return
+                elsif @user && @user.size == 0
+                    render :status => 400 and return
+                else
+                    render :status => 500 and return
+                end
+            else
+                render :status => 400 and return
+            end
+            render json: @user
+        else
+            render :status => 404 and return
+        end
     end
 
     def forgot_passwd
