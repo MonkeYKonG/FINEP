@@ -28,6 +28,9 @@
   <mat-card>
     <mat-card-title>
       Contrats:
+      <p *ngFor='let contrat in this._contrats'>
+        {{ contrat.body }}
+      </p>
     </mat-card-title>
   </mat-card>
   <mat-card>
