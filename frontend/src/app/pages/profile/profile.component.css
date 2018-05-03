@@ -4,13 +4,9 @@ body {
   }
   
   mat-card {
-    max-width: 80%;
+    max-width: 90%;
     margin: 2em auto;
-    text-align: center;
-  }
-  
-  mat-toolbar-row {
-    justify-content: space-between;
+    text-align: left;
   }
   
   .done {
@@ -18,4 +14,14 @@ body {
     bottom: 20px;
     right: 20px;
     color: white;
+  }
+
+  .left-align {
+    position: absolute;
+    left: 5px;
+  }
+
+  .right-align {
+    position: absolute;
+    right: 5px;
   }
