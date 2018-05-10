@@ -1,9 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { ApiService } from '../../services/api.service';
 import { ActivatedRoute } from '@angular/router';
 import { User } from '../../models/user';
-import { UserInfoService } from '../../services/user-info.service';
-import { Observable } from 'rxjs/Observable';
-import { Subscription } from 'rxjs/Subscription';
+import { Contract } from '../../models/contract';
 
 @Component({
   selector: 'app-profile',
@@ -11,26 +10,16 @@ import { Subscription } from 'rxjs/Subscription';
   styleUrls: ['./profile.component.css']
 })
 export class ProfileComponent implements OnInit {
-  id: string;
-  userData: User = new User();
+  _profile: User;
+  _comments: Array<any>;
+  _contrats: Contract[] = [];
 
-  constructor(
-    private route: ActivatedRoute,
-    private userInfoService: UserInfoService) {
-      this.userData.name = 'NAME';
-      this.userData.pseudo = 'PSEUDO';
-      this.userData.capital = 42;
-     }
+  constructor(private apiService: ApiService, private activeRoute: ActivatedRoute) { }
 
   ngOnInit() {
-    this.id = this.route.snapshot.paramMap.get('id');
-    this.userInfoService.GetUserData(this.id).subscribe((userData) => {
-      console.log('UserData: ', userData);
-      // this.userData = userData;
-    },
-  (err) => {
-    console.error('error: ', err);
-  });
+    this.apiService.get('profile/' + this.activeRoute.snapshot.params['id']).subscribe(data => {
+      console.log(data);
+    });
   }
 
 }
