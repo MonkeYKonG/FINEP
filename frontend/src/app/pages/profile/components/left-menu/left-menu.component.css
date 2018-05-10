@@ -1,0 +1,13 @@
+  .left-container {
+    max-width: 100%;
+    margin: 10px;
+    font-size: 25px;
+  }
+
+  .avatar-container {
+    text-align: center;
+  }
+
+  .information-container {
+    text-align: left;
+  }
