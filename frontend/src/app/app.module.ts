@@ -8,6 +8,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { RoutesModule } from './routes/routes.module';
 
 import { ApiService } from './services/api.service';
+import { UserInfoService } from './services/user-info.service';
 import { HomeComponent } from './pages/home/home.component';
 import { ProfileComponent } from './pages/profile/profile.component';
 import { MyProfileComponent } from './pages/my-profile/my-profile.component';
@@ -41,7 +42,7 @@ import { WhoWeAreComponent } from './pages/who-we-are/who-we-are.component';
     BrowserAnimationsModule,
     RoutesModule
   ],
-  providers: [ApiService],
+  providers: [ApiService, UserInfoService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
