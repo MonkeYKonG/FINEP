@@ -1,2 +1,5 @@
-package-lock.json
-node_modules
+backend/.idea/*
+backend/db/*
+backend/log/*
+frontend/package-lock.json
+frontend/node_modules
