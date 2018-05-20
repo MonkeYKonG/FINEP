@@ -3,5 +3,24 @@
 }
 
 .demo-tab-content {
-  padding: 16px;
+  margin: 16px;
+}
+
+.Main-card {
+  max-width: 15%;
+  max-height: 15%;
+}
+
+.Inside-card {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.information-change-button{
+
+}
+
+.example-header-image {
+  background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');
+  background-size: cover;
 }

@@ -3,6 +3,7 @@ import { Component, OnInit } from '@angular/core';
 import { ApiService } from '../../services/api.service';
 import { Contract } from '../../models/contract';
 import { Investment } from '../../models/investment';
+import {User} from '../../models/user';
 
 @Component({
   selector: 'app-my-profile',
@@ -15,6 +16,7 @@ export class MyProfileComponent implements OnInit {
   investments: Array<Investment> = [];
   newContract: Contract = new Contract();
   newInvestment: Investment = new Investment();
+  Current_User: User;
 
   constructor(public apiService: ApiService) { }
 
@@ -26,6 +28,10 @@ export class MyProfileComponent implements OnInit {
     this.apiService.get('investments').subscribe((data: Array<Investment>) => {
       this.investments = data;
       console.log('/investment : ', this.investments);
+    });
+    this.apiService.get('Current_User').subscribe((data: User) => {
+      this.Current_User = data;
+      console.log('/current_user : ', this.Current_User);
     });
   }
 
