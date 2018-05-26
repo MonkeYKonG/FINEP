@@ -8,6 +8,8 @@ import { RouterModule } from '@angular/router';
 import { HomeComponent } from '../pages/home/home.component';
 import { ProfileComponent } from '../pages/profile/profile.component';
 import { MyProfileComponent } from '../pages/my-profile/my-profile.component';
+import {InformationsComponent} from '../pages/informations/informations.component';
+import {LegalsInformationsComponent} from '../pages/legals-informations/legals-informations.component';
 
 @NgModule({
   declarations: [],
@@ -26,6 +28,14 @@ import { MyProfileComponent } from '../pages/my-profile/my-profile.component';
       {
         path: 'my-profile',
         component: MyProfileComponent
+      },
+      {
+        path: 'legals-informations',
+        component: LegalsInformationsComponent
+      },
+      {
+        path: 'informations',
+        component: InformationsComponent
       }
     ]),
   ],

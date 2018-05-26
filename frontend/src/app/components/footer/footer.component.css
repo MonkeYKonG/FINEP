@@ -1,0 +1,17 @@
+footer{
+  background-color: #4863A0;
+
+
+}
+
+.mentions_legal {
+  text-align: center;
+}
+
+.mentions-legal a {
+  line-height: 1em;
+  display: inline-block;
+  text-decoration: none;
+  padding: 120px;
+  margin: 42px;
+}

@@ -1,0 +1,50 @@
+header {
+  background-color: #4863A0;
+  height: 120px;
+}
+
+/* Style buttons */
+
+ul {
+  display: inline;
+}
+
+.btn-img {
+  background-color: Transparent;
+  background-repeat:no-repeat;
+  border: none;
+  cursor:pointer;
+  overflow: hidden;
+  outline:none;
+}
+
+.btn {
+  background-color: DodgerBlue; /* Blue background */
+  border: none; /* Remove borders */
+  color: white; /* White text */
+  padding: 12px 50px; /* Some padding */
+  font-size: 16px; /* Set a font size */
+  cursor: pointer; /* Mouse pointer on hover */
+  margin-right: 15px;
+}
+
+/* Darker background on mouse-over */
+.btn:hover {
+  background-color: RoyalBlue;
+}
+
+.button_moyen {
+  width:30px;
+  height:30px;
+}
+
+.images_petit {
+  width:70px;
+  height:70px;
+}
+
+.images_tres_petit {
+  width:20px;
+  height:20px;
+}
+
