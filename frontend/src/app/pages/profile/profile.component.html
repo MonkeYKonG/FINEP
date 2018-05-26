@@ -1,3 +1,24 @@
+<<<<<<< HEAD
+<mat-sidenav-container>
+  <mat-sidenav mode="side" opened class="left-menu" fullscreen>
+    <app-left-menu [user]="profile">
+    </app-left-menu>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <app-profile-description [body]="fakeDescription"></app-profile-description>
+    <mat-card>
+      <mat-card-content>
+        <mat-tab-group>
+          <!-- This shoud became a ngfor directive -->
+          <mat-tab *ngFor="let c of contrats" label="{{ c.id }}">
+            <app-contrat-description [contract]="c"></app-contrat-description>
+          </mat-tab>
+        </mat-tab-group>
+      </mat-card-content>
+    </mat-card>
+  </mat-sidenav-content>
+</mat-sidenav-container>
+=======
 <div>
   <mat-toolbar color="primary">
     <span><mat-icon>mood</mat-icon></span>
@@ -26,3 +47,4 @@
     </button>
   </span>
 </div>
+>>>>>>> dev

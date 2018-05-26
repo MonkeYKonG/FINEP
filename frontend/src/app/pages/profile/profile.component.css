@@ -1,3 +1,40 @@
+<<<<<<< HEAD
+  mat-sidenav-container {
+    position: relative;
+    height: 100%;
+  }
+
+  mat-card {
+    padding-top: 1em;
+    max-width: 95%;
+    margin: 2em auto;
+    height: auto;
+}
+
+mat-card-title {
+    font-size: 200%;
+}
+  
+  .done {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    color: white;
+  }
+
+  .left-align {
+    position: absolute;
+    left: 5px;
+  }
+
+  .right-align {
+    position: absolute;
+    right: 5px;
+  }
+
+  .left-menu {
+    background-color: #3f51b5;
+=======
 body {
     margin: 0;
     font-family: Roboto, sans-serif;
@@ -18,4 +55,5 @@ body {
     bottom: 20px;
     right: 20px;
     color: white;
+>>>>>>> dev
   }
