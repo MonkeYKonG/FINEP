@@ -19,6 +19,10 @@ import { InformationsComponent } from './pages/informations/informations.compone
 import { ContactComponent } from './pages/contact/contact.component';
 import { LegalsInformationsComponent } from './pages/legals-informations/legals-informations.component';
 import { WhoWeAreComponent } from './pages/who-we-are/who-we-are.component';
+import { FavoritesComponent } from './pages/favorites/favorites.component';
+import { MyDiscussionsComponent } from './pages/my-discussions/my-discussions.component';
+import { MyDocumentsComponent } from './pages/my-documents/my-documents.component';
+import { OnGoingContractsComponent } from './pages/on-going-contracts/on-going-contracts.component';
 
 @NgModule({
   declarations: [
@@ -33,7 +37,11 @@ import { WhoWeAreComponent } from './pages/who-we-are/who-we-are.component';
     InformationsComponent,
     ContactComponent,
     LegalsInformationsComponent,
-    WhoWeAreComponent
+    WhoWeAreComponent,
+    FavoritesComponent,
+    MyDiscussionsComponent,
+    MyDocumentsComponent,
+    OnGoingContractsComponent
   ],
   imports: [
     BrowserModule,
