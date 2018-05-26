@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { MatDialog } from '@angular/material';
+import { MatDialog, MatDialogRef } from '@angular/material';
 
 @Component({
   selector: 'app-investment-dialog',
@@ -8,9 +8,14 @@ import { MatDialog } from '@angular/material';
 })
 export class InvestmentDialogComponent implements OnInit {
 
-  constructor(private dialog: MatDialog) { }
+  constructor(private dialogRef: MatDialogRef<InvestmentDialogComponent>) { }
 
   ngOnInit() {
+  }
+
+  ValidInvestment() {
+    console.log('invesment validate!');
+    this.dialogRef.close({test: 'salut'});
   }
 
 }

@@ -5,7 +5,7 @@ import { Observable } from 'rxjs/Observable';
 @Injectable()
 export class ApiService {
 
-  API_URL = 'http://localhost:3000/';
+  API_URL = 'http://10.41.176.160:3000/';
 
   constructor(public http: HttpClient) { }
 
