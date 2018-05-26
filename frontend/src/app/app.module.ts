@@ -6,6 +6,7 @@ import { PagesModule } from './pages/pages.module';
 
 import { ApiService } from './services/api.service';
 import { UserInfoService } from './services/user-info.service';
+import { InvestmentService } from './services/investment.service';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,7 @@ import { UserInfoService } from './services/user-info.service';
   imports: [
     PagesModule
   ],
-  providers: [ApiService, UserInfoService],
+  providers: [ApiService, UserInfoService, InvestmentService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

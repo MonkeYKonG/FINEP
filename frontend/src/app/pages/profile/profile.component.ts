@@ -1,9 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-import { ApiService } from '../../services/api.service';
 import { ActivatedRoute } from '@angular/router';
 import { User } from '../../models/user';
 import { Contract } from '../../models/contract';
 import { forEach } from '@angular/router/src/utils/collection';
+import { UserInfoService } from '../../services/user-info.service';
 
 @Component({
   selector: 'app-profile',
@@ -33,7 +33,7 @@ export class ProfileComponent implements OnInit {
   }
   /* END OF DEBUG FUNCTIONS */
 
-  constructor(private apiService: ApiService, private activeRoute: ActivatedRoute) {
+  constructor(private userInfoSrv: UserInfoService, private activeRoute: ActivatedRoute) {
     /* THIS IS DEBUG VALUES */
     this.profile = new User();
     this.profile.id = this.activeRoute.snapshot.params['id'];
@@ -49,8 +49,7 @@ export class ProfileComponent implements OnInit {
    }
 
   ngOnInit() {
-    const route: string = 'profile/' + this.activeRoute.snapshot.params['id'];
-    this.apiService.get(route).subscribe(
+    this.userInfoSrv.GetUserData(this.activeRoute.snapshot.params['id']).subscribe(
       data => {
         console.log(data);
       },

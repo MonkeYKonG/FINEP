@@ -6,6 +6,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialModule } from '../material/material.module';
 import { RoutesModule } from '../routes/routes.module';
 import { ComponentsModule } from '../components/components.module';
+import { DialogModule } from '../dialog/dialog.module';
 
 import { HomeComponent } from './home/home.component';
 
@@ -25,11 +26,13 @@ import { ProfileModule } from './profile/profile.module';
     MaterialModule,
     RoutesModule,
     ComponentsModule,
-    ProfileModule
+    ProfileModule,
+    DialogModule
   ],
   exports: [
     RoutesModule,
-    ComponentsModule
+    ComponentsModule,
+    DialogModule
   ],
   declarations: [
     HomeComponent,

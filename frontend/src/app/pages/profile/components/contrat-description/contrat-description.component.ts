@@ -1,5 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { Contract } from '../../../../models/contract';
+import { InvestmentService } from '../../../../services/investment.service';
 
 @Component({
   selector: 'app-contrat-description',
@@ -10,12 +11,16 @@ export class ContratDescriptionComponent implements OnInit {
 
   @Input() contract: Contract;
 
-  constructor() { }
+  constructor(private investSrv: InvestmentService) { }
 
   ngOnInit() {
     if (!this.contract) {
       this.contract = new Contract();
     }
+  }
+
+  button_click() {
+    this.investSrv.test_invest();
   }
 
 }
