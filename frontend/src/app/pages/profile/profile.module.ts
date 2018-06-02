@@ -10,6 +10,7 @@ import { LeftMenuComponent } from './components/left-menu/left-menu.component';
 import { ProfileDescriptionComponent } from './components/profile-description/profile-description.component';
 import { ContratDescriptionComponent } from './components/contrat-description/contrat-description.component';
 import { InvestmentService } from '../../services/investment.service';
+import { UserInfoService } from '../../services/user-info.service';
 
 @NgModule({
   imports: [
@@ -25,7 +26,7 @@ import { InvestmentService } from '../../services/investment.service';
     ContratDescriptionComponent
   ],
   providers: [
-    InvestmentService
+    InvestmentService, UserInfoService
   ]
 })
 export class ProfileModule { }

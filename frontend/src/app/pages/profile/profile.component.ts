@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { User } from '../../models/user';
@@ -60,20 +59,3 @@ export class ProfileComponent implements OnInit {
   }
 
 }
-=======
-import { Component, OnInit } from '@angular/core';
-
-@Component({
-  selector: 'app-profile',
-  templateUrl: './profile.component.html',
-  styleUrls: ['./profile.component.css']
-})
-export class ProfileComponent implements OnInit {
-
-  constructor() { }
-
-  ngOnInit() {
-  }
-
-}
->>>>>>> dev

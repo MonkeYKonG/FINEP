@@ -5,22 +5,22 @@ import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { PopUpComponent } from './pop-up/pop-up.component';
 import { RetractablePanelComponent } from './retractable-panel/retractable-panel.component';
+import { RoutesModule } from '../routes/routes.module';
 
 @NgModule({
   imports: [
-    CommonModule
+    CommonModule,
+    RoutesModule
   ],
   exports: [
     HeaderComponent,
     FooterComponent,
-    PopUpComponent,
-    RetractablePanelComponent
+    PopUpComponent
   ],
   declarations: [
     HeaderComponent,
     FooterComponent,
-    PopUpComponent,
-    RetractablePanelComponent
+    PopUpComponent
   ]
 })
 export class ComponentsModule { }
