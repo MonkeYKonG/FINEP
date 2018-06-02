@@ -1,9 +1,9 @@
 export class User {
-    public id: number;
-    public firstname: string;
-    public name: string;
-    public pseudo: string;
-    public capital: number;
+    public id = -1;
+    public firstname = 'undefined';
+    public name = 'undefined';
+    public pseudo = 'undefined';
+    public capital = -1;
 }
 
 export class SignInUser {
