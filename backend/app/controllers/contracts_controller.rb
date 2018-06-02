@@ -18,7 +18,19 @@ class ContractsController < ApplicationController
     end
 
     def sign_contract
-
+        if params[:Action] == "signcontrat"
+            if params[:id] != "" && params[:ctrnum] != ""
+                if User.exists?(:id => params[:id]) && Contract.exists?(:id => params[:ctrnum])
+                    render :status => 201 and return
+                else
+                    render :status => 400 and return
+                end
+            else
+                render :status => 400 and return
+            end
+        else
+            render :status => 404 and return
+        end
     end
 
     def get_contracts
