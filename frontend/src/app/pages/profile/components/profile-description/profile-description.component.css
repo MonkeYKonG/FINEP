@@ -1,0 +1,9 @@
+mat-card {
+    max-width: 95%;
+    margin: auto;
+    height: auto;
+}
+
+mat-card-title {
+    font-size: 250%;
+}

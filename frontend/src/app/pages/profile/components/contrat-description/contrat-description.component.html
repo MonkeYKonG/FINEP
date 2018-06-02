@@ -1,0 +1,39 @@
+<mat-list>
+  <h4 matSubHeader>
+    Description du contrat:
+  </h4>
+  <mat-list-item>
+    {{ contract.body }}
+  </mat-list-item>
+  <mat-list-item>
+      Emis le {{ contract.emit | date }}
+    </mat-list-item>
+    <mat-list-item>
+       Pour une durée de {{ contract.duration }} mois
+      </mat-list-item>
+  <mat-divider></mat-divider>
+  <h4 matSubHeader>
+    Documents joins:
+  </h4>
+  <mat-list-item>
+    Je suis un carouselle de photo / documents
+  </mat-list-item>
+  <mat-divider></mat-divider>
+  <h4 matSubHeader>
+    Ça me rapporte quoi?
+  </h4>
+  <mat-list-item>
+    Je suis un text recapitulant les possible gains
+  </mat-list-item>
+  <mat-divider></mat-divider>
+  <h4 matSubHeader>
+    Simulateur d'investissement?
+  </h4>
+  <mat-list-item>
+    Un simulateur de gain potentiel?
+  </mat-list-item>
+  <mat-divider></mat-divider>
+  <mat-list-item>
+    <button mat-raised-button color="primary" (click)="button_click()">Signer le contrat</button>
+  </mat-list-item>
+</mat-list>
