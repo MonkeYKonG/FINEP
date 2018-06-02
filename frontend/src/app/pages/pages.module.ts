@@ -16,6 +16,10 @@ import { LegalsInformationsComponent } from './legals-informations/legals-inform
 import { WhoWeAreComponent } from './who-we-are/who-we-are.component';
 import { InformationsComponent } from './informations/informations.component';
 import { ProfileModule } from './profile/profile.module';
+import { FavoritesComponent } from './favorites/favorites.component';
+import { MyDiscussionsComponent } from './my-discussions/my-discussions.component';
+import { MyDocumentsComponent } from './my-documents/my-documents.component';
+import { OnGoingContractsComponent } from './on-going-contracts/on-going-contracts.component';
 
 
 @NgModule({
@@ -40,7 +44,11 @@ import { ProfileModule } from './profile/profile.module';
     ContactComponent,
     LegalsInformationsComponent,
     WhoWeAreComponent,
-    InformationsComponent
+    InformationsComponent,
+    FavoritesComponent,
+    MyDiscussionsComponent,
+    MyDocumentsComponent,
+    OnGoingContractsComponent
   ]
 })
 export class PagesModule { }
