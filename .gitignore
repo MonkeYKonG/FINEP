@@ -1,5 +1,6 @@
+frontend/package-lock.json
+frontend/node_modules
+.vscode
 backend/.idea/*
 backend/db/*
 backend/log/*
-frontend/package-lock.json
-frontend/node_modules

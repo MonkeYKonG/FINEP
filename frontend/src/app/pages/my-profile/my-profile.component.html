@@ -1,8 +1,60 @@
-<p>
-  my-profile works!
-</p>
+
+<mat-card>
+  <mat-card-content>
+    <mat-tab-group class="demo-tab-group">
+      <mat-tab label="Informations">
+        <div class="demo-tab-content">
+          <mat-card class="Main-card">
+            <mat-card-header>
+              <div mat-card-avatar class="example-header-image"></div>
+              <mat-card-title>PRENOM NOM</mat-card-title>
+              <mat-card-subtitle>NOTE</mat-card-subtitle>
+            </mat-card-header>
+            <mat-card-content>
+              <mat-card class="Inside-card">
+                <mat-card-header>
+                  <mat-card-title>CAPITAL INFORMATIONS</mat-card-title>
+                </mat-card-header>
+                <mat-card-content>
+                </mat-card-content>
+              </mat-card>
+
+              <mat-card class="Inside-card">
+                <mat-card-header>
+                  <mat-card-title>LISTE COMMENTAIRE</mat-card-title>
+                </mat-card-header>
+                <mat-card-content>
+                </mat-card-content>
+
+              </mat-card>
+            </mat-card-content>
+          </mat-card>
+          <div class="information-change-button">
+            <button mat-raised-button color="primary">CHANGE ICON</button>
+          </div>
+        </div>
+      </mat-tab>
+      <mat-tab label="Contrats créer">
+        <div class="demo-tab-content">
+        No content
+        </div>
+      </mat-tab>
+      <mat-tab label="Contrats signés">
+        No content
+      </mat-tab>
+      <mat-tab label="Collaborateurs actuels">
+        <div class="demo-tab-content">
+        No content
+        </div>
+      </mat-tab>
+      <mat-tab label="Historique des investissements">
+        No content
+      </mat-tab>
+    </mat-tab-group>
+  </mat-card-content>
+</mat-card>
+
 <form (ngSubmit)="submitNewContract()">
-  <input type="text" name="title" placeholder="title" [(ngModel)]="newContract.title" />
   <input type="text" name="body" placeholder="body" [(ngModel)]="newContract.body" />
   <input type="submit" value="New contract" />
 </form>
