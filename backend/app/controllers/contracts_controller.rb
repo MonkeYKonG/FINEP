@@ -10,7 +10,7 @@ class ContractsController < ApplicationController
                     if @new_contract.save
                         render :status => 201, :json => @new_contract and return
                     else
-                        render :status => 500
+                        render :status => 500 and return
                     end
                 else
                     render :status => 400 and return

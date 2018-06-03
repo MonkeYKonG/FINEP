@@ -71,19 +71,42 @@ class UsersController < ApplicationController
     end
 
     def update_profile
-
+        if params[:Action] === "updateprofile"
+            if params[:id] && params[:datas] && params[:values]
+                @ret_users = User.find(params[:id])
+                if @ret_users != nil
+                    l = params[:datas].length
+                    x = 0
+                    while x < l
+                        @ret_users[params[:datas][x]] = params[:values][x]
+                        x += 1
+                    end
+                    if @ret_users.save
+                        render :status => 201, :json => @ret_users and return
+                    else
+                        render :status => 500 and return
+                    end
+                else
+                    render :status => 400 and return
+                end
+            else
+                render :status => 400 and return
+            end
+        else
+            render :status => 404 and return
+        end
     end
 
     def get_info
         if params[:Action] === "profileinfo"
             if params[:users] && params[:datas]
                 @ret_users = User.select([:id] + params[:datas]).where(id: params[:users])
-                render status: 200, json: @ret_users
+                render status: 200, json: @ret_users and return
             else
-              render :status => 400
+              render :status => 400 and return
             end
         else
-          render :status => 404
+          render :status => 404 and return
         end
     end
 end
