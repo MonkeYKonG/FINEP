@@ -1,17 +1,23 @@
 class ContractsController < ApplicationController
     def new_contract
         if params[:Action] == "newcontrat"
-            if params[:id] != "" && params[:title] != "" && params[:body] != ""
+            if params[:id] && params[:title] && params[:body] && params[:id] != "" && params[:title] != "" && params[:body] != ""
                 if User.exists?(:id => params[:id])
-                    @new_contract = Contract.create authorid: params[:id], title: params[:title], body: params[:body]
-                    render :status => 201 and return
+                    @new_contract = Contract.new
+                    @new_contract.authorid = params[:id]
+                    @new_contract.title = params[:title]
+                    @new_contract.body = params[:body]
+                    if @new_contract.save
+                        render :status => 201, :json => @new_contract and return
+                    else
+                        render :status => 500 and return
+                    end
                 else
                     render :status => 400 and return
                 end
             else
                 render :status => 400 and return
             end
-            render json: @new_contract
         else
             render :status => 404 and return
         end
@@ -19,7 +25,7 @@ class ContractsController < ApplicationController
 
     def sign_contract
         if params[:Action] == "signcontrat"
-            if params[:id] != "" && params[:ctrnum] != ""
+            if params[:id] && params[:ctrnum] && params[:id] != "" && params[:ctrnum] != ""
                 if User.exists?(:id => params[:id]) && Contract.exists?(:id => params[:ctrnum])
                     render :status => 201 and return
                 else
