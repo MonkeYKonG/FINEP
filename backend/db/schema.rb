@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180406101251) do
+ActiveRecord::Schema.define(version: 20181105072852) do
 
   create_table "contracts", force: :cascade do |t|
     t.text "title"
@@ -34,7 +34,8 @@ ActiveRecord::Schema.define(version: 20180406101251) do
     t.string "name"
     t.string "pseudo"
     t.float "capital"
-    t.string "passwd"
+    t.string "password_digest"
+    t.boolean "open"
   end
 
 end

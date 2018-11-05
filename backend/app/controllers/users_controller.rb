@@ -9,6 +9,7 @@ class UsersController < ApplicationController
                 @new_user.pseudo = params[:pseudo]
                 @new_user.capital = 0
                 @new_user.passwd = params[:passwd]
+                @new_user.open = false
                 if !User.exists?(:pseudo => @new_user.pseudo) && !User.exists?(:email => @new_user.email)
                     if @new_user.save
                         render :status => 201, :json => @new_user and return
