@@ -46,5 +46,8 @@ export class MyProfileComponent implements OnInit {
       console.log('new investment', data);
     });
   }
-
+  panelOpenStateContratCree = false;
+  panelOpenStateContratSigne = false;
+  panelOpenStateCollaborateurActuel = false;
+  panelOpenStateHistoriqueInvestissement = false;
 }
