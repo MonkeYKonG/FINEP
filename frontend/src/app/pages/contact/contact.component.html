@@ -1,4 +1,33 @@
-<p>
-  contact works!
-</p>
+<div style="height:100px;display:block;margin-left: 30px">
+  Nous sommes disponible par email et par téléphone toute la journée, dans la mesure du possible !
+  <br>
+  Email: finep_2020@labeip.epitech.eu
+  <br>
+  Téléphone: XX XX XX XX XX
+  <br><br>
+  Tout message sera lu avec la plus grande attention, il nous est indispensable d'avoir differentes remarques pour pouvoir
+  évolué ou se remettre en question. Si vous avez la moindre interrogation, n'hésité plus ! <br>
+</div>
+
+<div id="after_submit"></div>
+<form id="contact_form" action="#" method="POST" enctype="multipart/form-data" style="margin-left: 30px">
+  <div class="row">
+    <label class="required" for="name">Your name:</label><br />
+    <input id="name" class="input" name="name" type="text" value="" size="30" /><br />
+    <span id="name_validation" class="error_message"></span>
+  </div>
+  <div class="row">
+    <label class="required" for="email">Your email:</label><br />
+    <input id="email" class="input" name="email" type="text" value="" size="30" /><br />
+    <span id="email_validation" class="error_message"></span>
+  </div>
+  <div class="row">
+    <label class="required" for="message">Your message:</label><br />
+    <textarea id="message" class="input" name="message" rows="7" cols="30"></textarea><br />
+    <span id="message_validation" class="error_message"></span>
+  </div>
+
+  <input id="submit_button" type="submit" value="Send email" />
+</form> <br>
+
 <a routerLink="/who-we-are"> Qui sommes nous ? </a>

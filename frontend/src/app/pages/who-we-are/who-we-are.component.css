@@ -1,0 +1,10 @@
+img.display_center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto
+}
+
+p.margin25_left{
+  display: block;
+  margin-left: 50px;
+}
