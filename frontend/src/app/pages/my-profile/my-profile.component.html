@@ -36,19 +36,71 @@
       </mat-tab>
       <mat-tab label="Contrats créer">
         <div class="demo-tab-content">
-        No content
+          <mat-accordion>
+            <mat-expansion-panel (closed)="panelOpenStateContratCree = false"
+                                 (opened)="panelOpenStateContratCree = true">
+              <mat-expansion-panel-header>
+                <mat-panel-title>
+                  Date
+                </mat-panel-title>
+                <mat-panel-description>
+                  Nom de la personne avec qui le contrat est établis
+                </mat-panel-description>
+              </mat-expansion-panel-header>
+              <p>Description du contrat</p>
+            </mat-expansion-panel>
+          </mat-accordion>
         </div>
       </mat-tab>
       <mat-tab label="Contrats signés">
-        No content
+        <mat-accordion>
+          <mat-expansion-panel (closed)="panelOpenStateContratSigne = false"
+                               (opened)="panelOpenStateContratSigne = true">
+            <mat-expansion-panel-header>
+              <mat-panel-title>
+                Date
+              </mat-panel-title>
+              <mat-panel-description>
+                Nom de la personne avec qui le contrat est établis
+              </mat-panel-description>
+            </mat-expansion-panel-header>
+            <p>Description du contrat</p>
+          </mat-expansion-panel>
+        </mat-accordion>
       </mat-tab>
       <mat-tab label="Collaborateurs actuels">
         <div class="demo-tab-content">
-        No content
+          <mat-accordion>
+            <mat-expansion-panel (closed)="panelOpenStateCollaborateurActuel = false"
+                                 (opened)="panelOpenStateCollaborateurActuel = true">
+              <mat-expansion-panel-header>
+                <mat-panel-title>
+                  Date
+                </mat-panel-title>
+                <mat-panel-description>
+                  Nom du collaborateur
+                </mat-panel-description>
+              </mat-expansion-panel-header>
+              <p>Description du/des contrats avec ce collaborateur</p>
+            </mat-expansion-panel>
+          </mat-accordion>
         </div>
       </mat-tab>
       <mat-tab label="Historique des investissements">
-        No content
+        <mat-accordion>
+          <mat-expansion-panel (closed)="panelOpenStateHistoriqueInvestissement = false"
+                               (opened)="panelOpenStateHistoriqueInvestissement = true">
+            <mat-expansion-panel-header>
+              <mat-panel-title>
+                Date
+              </mat-panel-title>
+              <mat-panel-description>
+                Montant de l'investissement ainsi que l'endroit
+              </mat-panel-description>
+            </mat-expansion-panel-header>
+            <p>Description de l'investissement</p>
+          </mat-expansion-panel>
+        </mat-accordion>
       </mat-tab>
     </mat-tab-group>
   </mat-card-content>

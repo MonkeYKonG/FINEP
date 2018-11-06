@@ -1,6 +1,8 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
+import {MatExpansionModule} from '@angular/material/expansion';
+
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialModule } from '../material/material.module';
@@ -21,7 +23,6 @@ import { MyDiscussionsComponent } from './my-discussions/my-discussions.componen
 import { MyDocumentsComponent } from './my-documents/my-documents.component';
 import { OnGoingContractsComponent } from './on-going-contracts/on-going-contracts.component';
 
-
 @NgModule({
   imports: [
     CommonModule,
@@ -31,7 +32,8 @@ import { OnGoingContractsComponent } from './on-going-contracts/on-going-contrac
     RoutesModule,
     ComponentsModule,
     ProfileModule,
-    DialogModule
+    DialogModule,
+    MatExpansionModule
   ],
   exports: [
     RoutesModule,
